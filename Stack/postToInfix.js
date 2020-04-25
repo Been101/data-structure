@@ -19,7 +19,7 @@ function postToinfix(exp) {
         while (stack.top() !== '('){
           postfix_list.push(stack.pop())
         }
-        stack.pop()
+        stack.pop() // 弹出左括号
       }else {
         if(stack.isEmpty()) {
           stack.push(item)
